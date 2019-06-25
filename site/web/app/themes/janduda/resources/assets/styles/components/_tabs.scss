@@ -1,0 +1,33 @@
+.tabs.has-spacer {
+  border-bottom: 5px solid $primary;
+  margin-bottom: 0;
+}
+
+.tabs.is-toggle {
+  li {
+    a {
+      border: none;
+
+      @extend .button.is-medium;
+    }
+
+    &:not(.is-active) {
+      a {
+        color: $primary;
+        background-color: rgba($primary, 0.15);
+      }
+    }
+  }
+
+  li:first-child {
+    a {
+      border-radius: 2px 0 0 0;
+    }
+  }
+
+  li:last-child {
+    a {
+      border-radius: 0 2px 0 0;
+    }
+  }
+}

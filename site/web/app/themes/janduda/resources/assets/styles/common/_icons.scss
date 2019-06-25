@@ -1,0 +1,39 @@
+$small-size: 24px;
+$default-size: 32px;
+$medium-size: 44px;
+$large-size: 64px;
+
+.icon {
+  display: inline-block;
+  width: $default-size;
+  height: $default-size;
+  background-size: $default-size / 2;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.is-small {
+    width: $small-size;
+    height: $small-size;
+    background-size: $small-size / 2;
+  }
+
+  &.is-medium {
+    width: $medium-size;
+    height: $medium-size;
+    background-size: $medium-size / 2;
+  }
+
+  &.is-large {
+    width: $large-size;
+    height: $large-size;
+    background-size: $large-size / 2;
+  }
+}
+
+.icon-facebook {
+  background-image: url("../../svg/facebook-logo.svg");
+}
+
+.icon-twitter {
+  background-image: url("../../svg/twitter-logo-silhouette.svg");
+}

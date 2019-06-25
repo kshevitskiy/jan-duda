@@ -1,0 +1,28 @@
+.button {
+  font-size: $small-font-size;
+  font-weight: normal;
+  border-radius: 2px;
+  box-shadow: none;
+  min-width: 6 * $gap;
+}
+
+.button.is-medium {
+  height: 48px;
+
+  @extend .button;
+}
+
+.button.is-large {
+  height: 60px;
+
+  @extend .button;
+}
+
+.button.is-text {
+  color: $primary;
+  text-decoration: none;
+
+  span {
+    border-bottom: 1px solid;
+  }
+}

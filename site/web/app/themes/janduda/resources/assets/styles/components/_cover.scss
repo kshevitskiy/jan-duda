@@ -1,0 +1,8 @@
+.cover {
+  &__photo {
+    background-size: cover;
+    background-position: center;
+
+    @extend .is-overlay;
+  }
+}

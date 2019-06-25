@@ -1,0 +1,43 @@
+$margins: (
+  margin-bottom: 0,
+  margin-top: 0,
+  margin-left: 0,
+  margin-right: 0
+);
+
+$paddings: (
+  padding-bottom: 0,
+  padding-top: 0,
+  padding-left: 0,
+  padding-right: 0
+);
+
+@each $margin, $value in $margins {
+  .no-#{$margin} {
+    #{$margin}: $value !important;
+  }
+}
+
+@each $padding, $value in $paddings {
+  .no-#{$padding} {
+    #{$padding}: $value !important;
+  }
+}
+
+@each $size in $sizes {
+  $i: index($sizes, $size);
+
+  .is-display-#{$i} {
+    font-size: $size;
+
+    @include from($tablet) {
+      font-size: 2 * $size;
+      line-height: 1.2;
+    }
+  }
+}
+
+.has-text-weight-extrabold {
+  font-weight: 900;
+}
+

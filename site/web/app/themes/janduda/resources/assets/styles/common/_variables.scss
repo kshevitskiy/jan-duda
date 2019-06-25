@@ -1,0 +1,32 @@
+@import "~bulma/sass/utilities/initial-variables";
+
+/** Colors */
+$black:                 #000;
+$primary:               #ff1212;
+$link:                  $primary;
+$dark:                  #292929;
+
+/** Text */
+$family-primary:        "SF Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-size:        1em;
+// $body-font-size:        0.875em;
+
+/** Card */
+$card-header-shadow:    none;
+
+/** Box Model  */
+$spacer:                2rem;
+
+/** Navbar */
+$navbar-height:                         3 * $spacer;
+$navbar-item-color:                     $white;
+$navbar-item-hover-color:               $grey-lighter;
+$navbar-item-hover-background-color:    transparent;
+$navbar-item-active-color:              $white;
+$navbar-item-img-max-height:            2.5 * $spacer;
+
+/** Buttons */
+
+/** Section */
+$section-padding:        (1.5 * $spacer) ($spacer / 2);
+$section-padding-medium: (2.5 * $spacer) (0.75 * $spacer);
