@@ -1,7 +1,7 @@
 <section class="section is-medium no-padding-bottom">
   <header class="section-header">
     <div class="container">
-      <h2 class="title is-2">Wydarzenia</h2>
+      <h2 class="title is-2">Wydarzenia....</h2>
     </div>
   </header>
 
