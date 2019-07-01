@@ -5,7 +5,7 @@
         <div class="column widget">
           <div class="widget-content">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
+              src="@asset('images/svg/logo.svg')"
               alt="JKD"
               class="footer-logo"
             >

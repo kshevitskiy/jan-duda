@@ -1,3 +1,84 @@
+body {
+  animation: fadein 0.4s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .section-header {
-  margin-bottom: 1.5 * $gap;
+  margin-bottom: $gap;
+
+  @include from($tablet) {
+    margin-bottom: 1.5 * $gap;
+  }
+}
+
+.slider,
+.gallery {
+  .pagination {
+    z-index: 1;
+    width: 100%;
+    height: 2.5 * $gap;
+    left: 0;
+    bottom: 0;
+    padding: $gap;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 $gap / 4;
+    border: 1px solid $white;
+    outline: none;
+
+    &--active {
+      background-color: $white;
+    }
+  }
+
+  .navigation {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: $gap $gap / 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .next,
+  .prev {
+    width: 2 * $gap;
+    height: 2 * $gap;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-size: $gap;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &[class*="disabled"] {
+      opacity: 0.25;
+    }
+  }
+
+  .prev {
+    background-image: url("../../images/svg/left-chevron.svg");
+  }
+
+  .next {
+    background-image: url("../../images/svg/right-chevron.svg");
+  }
 }

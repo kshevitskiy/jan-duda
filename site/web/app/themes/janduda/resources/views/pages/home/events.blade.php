@@ -1,12 +1,12 @@
 <section class="section is-medium no-padding-bottom">
   <header class="section-header">
     <div class="container">
-      <h2 class="title is-2">Wydarzenia....</h2>
+      <h2 class="title is-2">Wydarzenia</h2>
     </div>
   </header>
 
   <div class="container">
-    <div class="tabs is-toggle has-spacer">
+    <div class="tabs is-toggle">
       <ul>
         <li class="is-active">
           <a>Nadchodzące</a>
@@ -17,23 +17,20 @@
       </ul>
     </div>
 
-    <div class="columns is-multiline is-gapless no-margin-bottom">
-      @for ($i = 0; $i < 3; $i++)      
-      <div class="card event-card column is-12 is-4-desktop">
-        <div class="card-header">
-          <p class="event-card__city">
-            St. Petersburg
-          </p>
+    <div class="event-list event-list--upcoming">
+      @for ($i = 0; $i < 3; $i++)
+      <div class="event event--upcoming">
+        <div class="event__city">
+          St. Petersburg
         </div>
-        <div class="card-content">
-          <p class="event-card__date">
+        <div class="box is-shadowless no-padding-right no-padding-bottom">
+          <time class="event__date">
             15.04.2019
-          </p>
-          <div class="event-card__content">
-            <p>
-              Indywidualne mistrzostwa Świata w szachach błyskawicznych
-            </p>
-          </div>
+          </time>
+          <span class="is-spacer is-small"></span>
+          <h3 class="event__title is-size-5">
+            Indywidualne mistrzostwa Świata w szachach błyskawicznych
+          </h3>
         </div>
       </div>
       @endfor

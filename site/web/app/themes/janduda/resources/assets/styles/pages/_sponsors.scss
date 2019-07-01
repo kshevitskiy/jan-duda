@@ -1,0 +1,8 @@
+.sponsor-logo {
+  max-width: 3 * $gap;
+
+  @include from($tablet) {
+    max-width: 5 * $gap;
+    margin: 0 auto;
+  }
+}

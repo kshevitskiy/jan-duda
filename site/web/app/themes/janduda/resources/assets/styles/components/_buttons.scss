@@ -1,6 +1,6 @@
 .button {
   font-size: $small-font-size;
-  font-weight: normal;
+  font-weight: $weight-semibold;
   border-radius: 2px;
   box-shadow: none;
   min-width: 6 * $gap;

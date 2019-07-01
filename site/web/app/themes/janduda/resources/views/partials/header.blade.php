@@ -4,8 +4,8 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="{{ home_url('/') }}">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
-            width="200"
+            src="@asset('images/svg/logo-light.svg')"
+            width="120"
             height="40"
             alt="{{ get_bloginfo('name', 'display') }}"
           >

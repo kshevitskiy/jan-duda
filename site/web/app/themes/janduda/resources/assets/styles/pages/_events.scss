@@ -1,0 +1,41 @@
+.section {
+  &.events {
+    &--stack {
+      padding-bottom: 0;
+
+      @include from($tablet) {
+        padding-top: 0;
+        margin-top: -#{(5 * $gap)};
+
+        .title {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.event-list {
+  border-top: 5px solid $dark;
+  border-left: 1px solid $grey-lighter;
+  border-right: 1px solid $grey-lighter;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-ter;
+
+  &--upcoming {
+    border-top-color: $primary;
+  }
+
+  @include from($tablet) {
+    display: grid;
+    grid-column-gap: 1px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include from($desktop) {
+    display: grid;
+    grid-column-gap: 1px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

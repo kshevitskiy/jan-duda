@@ -1,4 +1,6 @@
-// .hero-body {
-//   padding-left: ($spacer / 2);
-//   padding-right: ($spacer / 2);
-// }
+.hero-body {
+  @include until($tablet) {
+    padding-top: 1.5 * $navbar-height;
+    padding-bottom: 1.5 * $navbar-height;
+  }
+}

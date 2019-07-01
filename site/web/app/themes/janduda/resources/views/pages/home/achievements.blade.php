@@ -1,5 +1,7 @@
 <section class="hero is-medium is-black is-relative">
-  @include('partials.cover')
+  @include('partials.cover', array(
+    'image' => 'images/home-2.jpg'
+  ))  
   <div class="hero-body">
     <header class="section-header">
       <div class="container">

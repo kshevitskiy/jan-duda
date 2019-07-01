@@ -1,0 +1,32 @@
+.heading {
+  font-weight: $weight-bold;
+  margin-right: $gap;
+  margin-bottom: 0;
+  text-transform: none;
+  overflow: hidden;
+  display: flex;
+}
+
+.heading-prefix {
+  font-size: $size-7;
+  color: $primary;
+  margin-right: $gap / 2;
+  align-self: flex-start;
+
+  @include from($tablet) {
+    font-size: $size-6;
+    margin-bottom: $gap;
+  }
+}
+
+.heading-body {
+  font-size: $size-4;
+  color: $secondary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include from($tablet) {
+    font-size: $size-2;
+  }
+}

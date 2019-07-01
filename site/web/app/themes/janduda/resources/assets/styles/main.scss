@@ -20,6 +20,9 @@
 @import "components/tabs";
 @import "components/card";
 @import "components/wp-classes";
+@import "components/reference";
+@import "components/heading";
+@import "components/slide";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
@@ -28,5 +31,8 @@
 @import "layouts/hero";
 @import "layouts/tinymce";
 @import "pages/home";
+@import "pages/press";
+@import "pages/sponsors";
+@import "pages/events";
 @import "common/icons";
 @import "common/helpers";

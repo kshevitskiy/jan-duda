@@ -7,33 +7,54 @@ $large-size: 64px;
   display: inline-block;
   width: $default-size;
   height: $default-size;
-  background-size: $default-size / 2;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
   &.is-small {
     width: $small-size;
     height: $small-size;
-    background-size: $small-size / 2;
   }
 
   &.is-medium {
     width: $medium-size;
     height: $medium-size;
-    background-size: $medium-size / 2;
   }
 
   &.is-large {
     width: $large-size;
     height: $large-size;
-    background-size: $large-size / 2;
   }
 }
 
 .icon-facebook {
-  background-image: url("../../svg/facebook-logo.svg");
+  background-image: url("../../images/svg/facebook-logo.svg");
 }
 
 .icon-twitter {
-  background-image: url("../../svg/twitter-logo-silhouette.svg");
+  background-image: url("../../images/svg/twitter-logo-silhouette.svg");
+}
+
+.icon-clock {
+  background-image: url("../../images/svg/clock.svg");
+}
+
+.icon-handchess {
+  background-image: url("../../images/svg/handchess.svg");
+}
+
+.icon-trophy {
+  background-image: url("../../images/svg/trophy.svg");
+}
+
+.icon-pdf-file-download {
+  background-image: url("../../images/svg/pdf-file-download.svg");
+}
+
+.icon-zip-file-download {
+  background-image: url("../../images/svg/zip-file-download.svg");
+}
+
+.icon-download {
+  background-image: url("../../images/svg/download.svg");
 }

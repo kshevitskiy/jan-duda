@@ -1,0 +1,113 @@
+.contact {
+  text-align: center;
+  box-shadow: 0 0 2 * $gap $white-ter;
+  padding-top: $gap;
+  padding-bottom: $gap;
+  height: 100%;
+
+  @include from($tablet) {
+    padding: 2 * $gap;
+  }
+}
+
+.contact-header {
+  max-width: 12 * $gap;
+  margin: 0 auto $gap;
+}
+
+.contact-body {
+  max-width: 12 * $gap;
+  margin: 0 auto;
+}
+
+.person {
+  margin-top: 2 * $gap;
+  margin-bottom: 2 * $gap;
+
+  &__photo {
+    max-width: 190px;
+    margin: 0 auto $gap / 2;
+  }
+
+  &__name {
+    font-size: $size-6;
+    font-weight: $weight-bold;
+    display: block;
+  }
+
+  &__job {
+    font-size: $size-7;
+    color: $grey;
+    display: block;
+  }
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include from($tablet) {
+    margin-bottom: $gap;
+  }
+}
+
+.contact-link {
+  font-size: $size-5;
+  font-weight: $weight-bold;
+  color: $primary;
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-bottom: $gap / 4;
+  }
+
+  &--underlined {
+    border-bottom: 2px solid;
+  }
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery-actions {
+  z-index: 9;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+
+  .action {
+    min-height: 2.5 * $gap;
+    padding: 0 24px;
+    border-radius: 0;
+    border: 0;
+    background-color: $white;
+    color: $primary;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.is-primary {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &__label {
+      margin-right: $gap;
+      display: flex;
+      align-items: center;
+
+      &--underlined {
+        border-bottom: 1px solid;
+      }
+    }
+
+    &__icon {
+      flex-shrink: 0;
+    }
+  }
+}

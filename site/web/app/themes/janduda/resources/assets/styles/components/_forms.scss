@@ -18,3 +18,19 @@
 .search-form .search-submit {
   @extend .button, .is-info;
 }
+
+.input {
+  &.is-large {
+    height: 2 * $gap;
+    padding: $gap / 2;
+    font-size: $size-6;
+  }
+}
+
+.textarea {
+  &.is-large {
+    min-height: 6 * $gap;
+    padding: $gap / 2;
+    font-size: $size-6;
+  }
+}

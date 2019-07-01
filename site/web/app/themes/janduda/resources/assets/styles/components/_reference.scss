@@ -1,0 +1,20 @@
+.ref {
+  &__icon {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}
+
+.doc-ref {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: $gap / 2;
+  padding-bottom: $gap / 2;
+  border-bottom: 1px solid $grey-lighter;
+
+  @include from($tablet) {
+    padding-top: $gap;
+    padding-bottom: $gap;
+  }
+}

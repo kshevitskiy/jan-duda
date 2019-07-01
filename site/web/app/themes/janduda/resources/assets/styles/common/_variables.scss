@@ -3,6 +3,7 @@
 /** Colors */
 $black:                 #000;
 $primary:               #ff1212;
+$secondary:             #383b4a;
 $link:                  $primary;
 $dark:                  #292929;
 
@@ -10,6 +11,8 @@ $dark:                  #292929;
 $family-primary:        "SF Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $body-font-size:        1em;
 // $body-font-size:        0.875em;
+$weight-normal:         400;
+$weight-black:          800;
 
 /** Card */
 $card-header-shadow:    none;
@@ -23,9 +26,15 @@ $navbar-item-color:                     $white;
 $navbar-item-hover-color:               $grey-lighter;
 $navbar-item-hover-background-color:    transparent;
 $navbar-item-active-color:              $white;
-$navbar-item-img-max-height:            2.5 * $spacer;
+$navbar-item-img-max-height:            1.75 * $spacer;
 
 /** Buttons */
+
+/** Inputs */
+$input-shadow:                          none;
+$input-focus-border-color:              $grey-light;
+$input-focus-box-shadow-color:          rgba($white-ter, 0.5);
+$input-radius:                          $radius / 2;
 
 /** Section */
 $section-padding:        (1.5 * $spacer) ($spacer / 2);

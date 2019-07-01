@@ -58,7 +58,7 @@
 
 .footer-logo {
   width: 100%;
-  max-width: 10 * $gap;
+  max-width: 9 * $gap;
 }
 
 .footer-widgets {
@@ -85,6 +85,7 @@
 
   .icon {
     background-color: $dark;
+    background-size: 50%;
     border-radius: 50%;
   }
 }

@@ -1,35 +1,132 @@
 .card {
   border-radius: 2px;
+  overflow: hidden;
+
+  .attainment {
+    background-color: $white;
+    border-radius: $radius;
+
+    &__title {
+      font-size: 18px;
+      font-weight: $weight-normal;
+      margin-bottom: $gap;
+
+      @include from($tablet) {
+        padding-right: $gap;
+      }
+    }
+
+    .details {
+      margin-bottom: $gap;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      &__city {
+        font-size: 13px;
+        font-weight: $weight-bold;
+        text-transform: uppercase;
+        align-self: flex-end;
+        padding-right: $gap;
+      }
+
+      &__year {
+        font-size: $size-4;
+        font-weight: $weight-bold;
+        line-height: 1;
+        color: $primary;
+        text-align: right;
+      }
+    }
+
+    .prize {
+      color: $black;
+
+      &__label {
+        font-size: $size-4;
+        font-weight: $weight-black;
+      }
+
+      &__description {
+        display: block;
+        clear: both;
+      }
+    }
+
+    &--featured {
+      background-color: $primary;
+
+      .details__city {
+        color: $grey-lighter;
+      }
+
+      .attainment__title,
+      .details__year,
+      .prize {
+        color: $white;
+      }
+    }
+  }
+
+  .attainment-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @extend .card-content;
+  }
 }
 
-.event-card {
-  box-shadow: 0 0 0 1px $grey-lighter;
+.event {
+  $root: &;
 
-  &__city {
-    width: 100%;
-    text-align: right;
-    color: $grey;
-  }
+  border-radius: 0;
+  padding: $gap $gap 0;
+  background-color: $white;
+  border-bottom: 1px solid $grey-lighter;
 
   &__date {
     font-size: $size-3;
+    font-weight: 200;
     line-height: 1;
-    margin-bottom: $gap;
+    margin-right: $gap;
   }
 
-  &__content {
-    font-size: $size-6;
+  &__city {
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: $grey;
   }
 
-  .card-header {
-    padding: $gap (0.625 * $gap) 0;
+  &__title,
+  &__image,
+  &__link {
+    display: block;
+    margin-bottom: $gap / 2;
   }
 
-  .card-content {
-    @include from($tablet) {
-      padding: (0.625 * $gap) (1.875 * $gap) (1.5 * $gap);
+  &__title {
+    margin-right: $gap;
+  }
+
+  &__link {
+    float: right;
+    line-height: 1;
+    border-bottom: 1px solid;
+  }
+
+  &--upcoming {
+    padding: $gap $gap 1.5 * $gap;
+
+    #{$root}__title {
+      margin-bottom: 0;
     }
+  }
+
+  &--overview {
+    padding: $gap $gap / 2 0;
   }
 }
 
@@ -175,13 +272,6 @@
     @include from($tablet) {
       border-right: 1px solid rgba($white, 0.15);
     }
-  }
-
-  &__icon {
-    width: 2 * $gap;
-    height: 2 * $gap;
-    border: 1px solid $white;
-    border-radius: 50%;
   }
 
   &__number {

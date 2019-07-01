@@ -37,7 +37,24 @@ $paddings: (
   }
 }
 
-.has-text-weight-extrabold {
-  font-weight: 900;
+.has-text-weight-black {
+  font-weight: $weight-black;
 }
 
+.has-letterspacing {
+  letter-spacing: 2px;
+}
+
+.is-transparent {
+  background-color: transparent;
+}
+
+.is-spacer {
+  width: 100%;
+  float: left;
+  margin-bottom: $gap;
+
+  &.is-small {
+    margin-bottom: $gap / 2;
+  }
+}
