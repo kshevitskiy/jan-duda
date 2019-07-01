@@ -3,7 +3,7 @@
 # Define accompanying passwords/secrets in group_vars/staging/vault.yml
 
 wordpress_sites:
-  janduda.com:
+  slvrcode.com:
     site_hosts:
       - canonical: janduda.slvrcode.com
         # redirects:
