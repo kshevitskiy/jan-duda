@@ -5,7 +5,7 @@
         <div class="contact box">
           <header class="contact-header">
             <h3 class="title is-2 has-text-weight-bold">
-              Kontakt
+              Kontakt...
             </h3>
           </header>
           <div class="contact-body">
