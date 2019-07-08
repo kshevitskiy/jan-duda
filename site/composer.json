@@ -24,7 +24,10 @@
     "forum": "https://discourse.roots.io/category/bedrock"
   },
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "github-oauth": {
+      "github.com": "3dba8acbb8c08e25dbb6a3374b474cc330856a97"
+    }
   },
   "repositories": [
     {
@@ -66,6 +69,10 @@
           "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/5.8.1.zip"
         }
       }
+    },
+    {
+      "type": "vcs",
+      "url":  "git@github.com:kshevitskiy/jkd-plugin.git"
     }
   ],
   "require": {
@@ -80,7 +87,8 @@
     "wp-sync-db/wp-sync-db-media-files": "*",
     "wp-premium/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/svg-support": "*",
-    "wpackagist-plugin/acf-to-rest-api": "*"
+    "wpackagist-plugin/acf-to-rest-api": "*",
+    "kshevitskiy/jkd-plugin": "@dev"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",
@@ -92,7 +100,8 @@
         "type:wordpress-muplugin",
         "wp-premium/advanced-custom-fields-pro",
         "wpackagist-plugin/svg-support",
-        "wpackagist-plugin/acf-to-rest-api"
+        "wpackagist-plugin/acf-to-rest-api",
+        "kshevitskiy/jkd-plugin"
       ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
