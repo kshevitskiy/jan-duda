@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "578df9d968c7a15311a0479c99ad7fcf",
+    "content-hash": "2d86aa413194aa6743f7e57439e9f7a5",
     "packages": [
         {
             "name": "composer/installers",
@@ -287,34 +287,35 @@
         },
         {
             "name": "kshevitskiy/jkd-plugin",
-            "version": "dev-master",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:kshevitskiy/jkd-plugin.git",
-                "reference": "75db89db086ba0ce8062ffe383f06664a83dc38e"
+                "reference": "1145b637bf5953d56475d9dfb44b251c18766bce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kshevitskiy/jkd-plugin/zipball/75db89db086ba0ce8062ffe383f06664a83dc38e",
-                "reference": "75db89db086ba0ce8062ffe383f06664a83dc38e",
+                "url": "https://api.github.com/repos/kshevitskiy/jkd-plugin/zipball/1145b637bf5953d56475d9dfb44b251c18766bce",
+                "reference": "1145b637bf5953d56475d9dfb44b251c18766bce",
                 "shasum": ""
             },
             "require": {
                 "jjgrainger/wp-custom-post-type-class": "^1.4",
+                "php": ">=7.0",
                 "stoutlogic/acf-builder": "^1.8"
             },
-            "type": "library",
+            "type": "wordpress-plugin",
             "autoload": {
                 "psr-4": {
                     "Wor\\": "app/"
                 }
             },
-            "description": "Dependency plugin for Jan Duda website",
+            "description": "Plugin for Jan Duda website",
             "support": {
-                "source": "https://github.com/kshevitskiy/jkd-plugin/tree/master",
+                "source": "https://github.com/kshevitskiy/jkd-plugin/tree/1.0.2",
                 "issues": "https://github.com/kshevitskiy/jkd-plugin/issues"
             },
-            "time": "2019-07-08T10:04:04+00:00"
+            "time": "2019-07-08T21:19:21+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -1089,7 +1090,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kshevitskiy/jkd-plugin": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
