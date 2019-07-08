@@ -27,7 +27,7 @@
       </template>
       <template v-slot:past>
         @foreach($past_events as $event)
-        <div class="event event--upcoming">
+        <div class="event-card event-card--upcoming">
           <div class="event-card__city">
             {{ get_field('event_city', $event->ID) }}
           </div>
