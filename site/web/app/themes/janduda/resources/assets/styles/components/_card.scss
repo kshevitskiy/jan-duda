@@ -3,6 +3,7 @@
   overflow: hidden;
 
   .attainment {
+    height: 100%;
     background-color: $white;
     border-radius: $radius;
 
@@ -77,13 +78,20 @@
   }
 }
 
-.event {
+.event-card {
   $root: &;
 
   border-radius: 0;
   padding: $gap $gap 0;
   background-color: $white;
-  border-bottom: 1px solid $grey-lighter;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $grey-lighter;
+
+    @include from($tablet) {
+      border: none;
+    }
+  }
 
   &__date {
     font-size: $size-3;

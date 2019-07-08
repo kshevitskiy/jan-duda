@@ -1,6 +1,6 @@
 <section class="hero is-medium is-black is-relative">
   @include('partials.cover', array(
-    'image' => 'images/bio-2.jpg'
+    'image' => App\asset_path('images/bio-2.jpg')
   ))
   <div class="hero-body no-padding-top">
     <header class="section no-padding-left no-padding-right">
@@ -10,31 +10,41 @@
     </header>
     <div class="container">
       <div class="columns is-multiline">
-        @for ($i = 0; $i < 12; $i++)
+        @foreach ($achievements as $item)
+        @php
+          $isFeatured = get_field('achievement_is_featured', $item->ID);
+          $year = date('Y', strtotime(get_field('achievement_date', $item->ID)));
+        @endphp
         <div class="column is-6-tablet is-4-widescreen is-3-fullhd">
-          <div class="card is-transparent">
-            <div class="attainment _attainment--featured">
+          <div class="card is-transparent is-full-height">
+            <div class="{{ $isFeatured ? 'attainment attainment--featured' : 'attainment' }}">
               <div class="attainment-content">
                 <h5 class="details">
                   <span class="details__city">
-                    Warszawa
+                    {{ get_field('achievement_city', $item->ID) }}
                   </span>
                   <span class="details__year">
-                    2018
+                    {{ $year }}
                   </span>
                 </h5>
                 <h4 class="attainment__title">
-                  Indywidualne mistrzostwa Świata w szachach błyskawicznych 
+                  {{ get_the_title($item->ID) }}
                 </h4>
                 <h3 class="prize">
-                  <span class="prize__label">I miejsce</span>
-                  <sub class="prize__description">(6½/9)</sub>
+                  <span class="prize__label">
+                    {{ get_field('achievement_prize', $item->ID) }}
+                  </span>
+                  @if(get_field('achievement_comment', $item->ID))
+                    <sub class="prize__description">
+                      {{ get_field('achievement_comment', $item->ID) }}
+                    </sub>
+                  @endif
                 </h3>
               </div>
             </div>
           </div>
         </div>
-        @endfor
+        @endforeach
       </div>
     </div>
   </div>

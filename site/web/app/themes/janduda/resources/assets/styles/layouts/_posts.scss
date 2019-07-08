@@ -1,0 +1,37 @@
+$headlines: (h2, h3, h4);
+
+.entry-header {
+  width: 100%;
+  max-width: $tablet;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.entry-meta {
+  margin-bottom: $gap;
+}
+
+.entry-content {
+  padding: 2.5 * $spacer 0;
+
+  @each $headline in $headlines {
+    #{$headline} {
+      margin-bottom: $gap;
+      font-weight: $weight-bold;
+      line-height: 1.55;
+      color: $black;
+    }
+  }
+
+  > p {
+    line-height: 1.75;
+  }
+
+  > *:not(div) {
+    max-width: $tablet;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gap / 2;
+    padding-right: $gap / 2;
+  }
+}

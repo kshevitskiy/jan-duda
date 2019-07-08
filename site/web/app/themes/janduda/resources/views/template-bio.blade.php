@@ -7,12 +7,10 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @include('components.hero', array(
-      'image' => 'images/bio.jpg',
+      'image' => App\get_thumb_url() ?? App\asset_path('images/bio.jpg'),
       'size'  => 'is-large'
     ))
-    @include('pages.bio.general')
-    <hr>
-    @include('pages.bio.professional')
+    @include('pages.bio.details')    
     @include('pages.bio.achievements')
     {{-- @include('partials.content-page') --}}
   @endwhile

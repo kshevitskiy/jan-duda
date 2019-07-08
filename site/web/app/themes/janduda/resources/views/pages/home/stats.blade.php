@@ -1,48 +1,25 @@
+@if( have_rows('achievements_stats') )
 <section class="stats">
   <div class="container">
-    <div class="columns">
-      {{--
-        @for ($i = 0; $i < 3; $i++)
-          <div class="column card stat-card">
-            <div class="card-content">
-              <i class="icon is-large"></i>
-              <h3>
-                <span class="stat-card__number">536</span>
-                <span class="stat-card__label">wygranych partii</span>
-              </h3>
-            </div>
+    <div class="columns">      
+      @while ( have_rows('achievements_stats') ) @php the_row() @endphp
+        <div class="column card stat-card">
+          <div class="card-content">
+            <i class="icon is-large" style="background-image: url('{{ get_sub_field('stat_icon') }}')"></i>
+            <h3>
+              <span class="stat-card__number">
+                {{ get_sub_field('stat_value') }}
+              </span>
+              <span class="stat-card__label">
+                {{ get_sub_field('stat_label') }}
+              </span>
+            </h3>
           </div>
-        @endfor
-      --}}
-      <div class="column card stat-card">
-        <div class="card-content">
-          <i class="icon icon-trophy is-large"></i>
-          <h3>
-            <span class="stat-card__number">536</span>
-            <span class="stat-card__label">wygranych partii</span>
-          </h3>
         </div>
-      </div>
-
-      <div class="column card stat-card">
-        <div class="card-content">
-          <i class="icon icon-handchess is-large"></i>
-          <h3>
-            <span class="stat-card__number">95 452+</span>
-            <span class="stat-card__label">ruchów na szachownicy</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="column card stat-card">
-        <div class="card-content">
-          <i class="icon icon-clock is-large"></i>
-          <h3>
-            <span class="stat-card__number">4000+</span>
-            <span class="stat-card__label">godzin rozgrywek</span>
-          </h3>
-        </div>
-      </div>
+      @endwhile
     </div>
   </div>
 </section>
+@else
+{{-- Nothing found --}}
+@endif

@@ -136,3 +136,26 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function get_thumb_url($post = null, $size = 'full')
+{
+    if (!has_post_thumbnail()) return;
+    return get_the_post_thumbnail_url($post, $size);
+}
+
+function get_first($arr = [])
+{
+    $first = array_slice($arr, 0, 1);
+    return array_shift($first);
+}
+
+function map_posts($args) 
+{
+    if(!$args) {
+        return;
+    }
+    $posts = get_posts($args);
+    return array_map(function ($post) use ($args) {
+        return $post;
+    }, $posts);
+}

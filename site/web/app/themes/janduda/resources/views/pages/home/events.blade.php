@@ -6,41 +6,52 @@
   </header>
 
   <div class="container">
-    <div class="tabs is-toggle">
-      <ul>
-        <li class="is-active">
-          <a>Nadchodzące</a>
-        </li>
-        <li>
-          <a>Przeszłe</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="event-list event-list--upcoming">
-      @for ($i = 0; $i < 3; $i++)
-      <div class="event event--upcoming">
-        <div class="event__city">
-          St. Petersburg
+    <hello-world>
+      <template v-slot:upcoming>
+        @foreach($upcoming_events as $event)
+        <div class="event-card event-card--upcoming">
+          <div class="event-card__city">
+            {{ get_field('event_city', $event->ID) }}
+          </div>
+          <div class="box is-shadowless no-padding-right no-padding-bottom">
+            <time class="event-card__date">
+              {{ get_field('event_date', $event->ID) }}
+            </time>
+            <span class="is-spacer is-small"></span>
+            <h3 class="event-card__title is-size-5">
+              {{ get_the_title($event->ID) }}
+            </h3>
+          </div>
         </div>
-        <div class="box is-shadowless no-padding-right no-padding-bottom">
-          <time class="event__date">
-            15.04.2019
-          </time>
-          <span class="is-spacer is-small"></span>
-          <h3 class="event__title is-size-5">
-            Indywidualne mistrzostwa Świata w szachach błyskawicznych
-          </h3>
+        @endforeach
+      </template>
+      <template v-slot:past>
+        @foreach($past_events as $event)
+        <div class="event event--upcoming">
+          <div class="event-card__city">
+            {{ get_field('event_city', $event->ID) }}
+          </div>
+          <div class="box is-shadowless no-padding-right no-padding-bottom">
+            <time class="event-card__date">
+              {{ get_field('event_date', $event->ID) }}
+            </time>
+            <span class="is-spacer is-small"></span>
+            <h3 class="event-card__title is-size-5">
+              {{ get_the_title($event->ID) }}
+            </h3>
+          </div>
         </div>
-      </div>
-      @endfor
-    </div>
+        @endforeach
+      </template>      
+    </hello-world>
     
-    <div class="section no-padding-bottom has-text-centered">
-      <a class="button is-large is-text">
-        <span>Zobacz wszystkie</span>
-      </a>
-    </div>
+    @if( get_field('events_button_label') && get_field('events_button_link') )
+      <div class="section no-padding-bottom has-text-centered">
+        <a href="{{ the_field('events_button_link') }}" class="button is-large is-text">
+          {{ the_field('events_button_label') }}
+        </a>
+      </div>
+    @endif
 
   </div>
 </section>

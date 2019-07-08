@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class FrontPage extends Controller
+class TemplateEvents extends Controller
 {
   public function upcoming_events()
   {
@@ -27,7 +27,16 @@ class FrontPage extends Controller
       'meta_type'			=> 'DATE'
     ]);
 
-    return $posts;
+    $events = array_map(function($post) {
+      return [
+        'id'    => $post->ID,
+        'title' => $post->post_title,
+        'city'  => get_field('event_city', $post->ID),
+        'date'  => get_field('event_date', $post->ID),
+      ];
+    }, $posts);
+
+    return json_encode($events, true);
   }
 
   public function past_events()
@@ -35,7 +44,7 @@ class FrontPage extends Controller
     $date_now = date('Y-m-d H:i:s');
     $posts = get_posts([
       'post_type'       => 'event',
-      'posts_per_page'  => '3',
+      'posts_per_page'  => '6',
       'meta_query' 		  => [
         'relation' 			=> 'AND',
         [
@@ -56,6 +65,17 @@ class FrontPage extends Controller
       'meta_type'			=> 'DATE'
     ]);
 
-    return $posts;
+    $events = array_map(function($post) {
+      return [
+        'id'    => $post->ID,
+        'title' => $post->post_title,
+        'url'   => get_the_permalink($post->ID),
+        'image' => get_the_post_thumbnail_url($post->ID),
+        'city'  => get_field('event_city', $post->ID),
+        'date'  => get_field('event_date', $post->ID),
+      ];
+    }, $posts);
+
+    return json_encode($events, true);
   }
 }

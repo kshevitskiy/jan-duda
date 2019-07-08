@@ -10,7 +10,7 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @include('components.hero', array(
-      'image' => 'images/events.jpg'
+      'image' => App\get_thumb_url() ?? App\asset_path('images/events.jpg')
     ))
     @include('pages.events.upcoming')
     @include('pages.events.past')

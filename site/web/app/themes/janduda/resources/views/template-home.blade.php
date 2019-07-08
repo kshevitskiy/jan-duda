@@ -7,7 +7,7 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @component('components.hero', array(
-      'image' => 'images/bio.jpg',
+      'image' => App\get_thumb_url() ?? App\asset_path('images/home.jpg'),
       'size'  => 'is-fullheight'
     ))
       <div class="has-text-centered">

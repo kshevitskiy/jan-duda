@@ -1,15 +1,14 @@
 import Vue from 'vue'; 
-import { Field, Input, Tabs } from 'buefy/dist/components'
-import HelloWorld from '../components/common/HelloWorld.vue'
-// import 'buefy/dist/buefy.css'
+import ListPosts from '../components/List.vue'
+import EventCard from '../components/common/card/Event.vue'
+import { Loading } from 'buefy/dist/components'
 
-Vue.use(Field)
-Vue.use(Input)
-Vue.use(Tabs)
+Vue.use(Loading)
 
 const app = new Vue({
   components: {
-    HelloWorld,
+    ListPosts,
+    EventCard,
   },
 })
 

@@ -54,3 +54,12 @@
   color: #000;
   background: #fff;
 }
+
+.wp-block-cover {
+  min-height: 10 * $gap;
+  margin-top: 2 * $gap;
+  margin-bottom: 2 * $gap;
+  background-color: $white-ter;
+
+  @extend .image.is-3by1;
+}
