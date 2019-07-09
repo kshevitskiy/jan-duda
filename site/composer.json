@@ -84,10 +84,11 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wp-sync-db/wp-sync-db": "*",
-    "wp-sync-db/wp-sync-db-media-files": "*",
+    "wp-sync-db/wp-sync-db-media-files": "*background",
     "wp-premium/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/svg-support": "*",
     "wpackagist-plugin/acf-to-rest-api": "*",
+    "wpackagist-plugin/contact-form-7": "*",
     "kshevitskiy/jkd-plugin": "*"
   },
   "require-dev": {
@@ -101,6 +102,7 @@
         "wp-premium/advanced-custom-fields-pro",
         "wpackagist-plugin/svg-support",
         "wpackagist-plugin/acf-to-rest-api",
+        "wpackagist-plugin/contact-form-7",
         "kshevitskiy/jkd-plugin"
       ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
