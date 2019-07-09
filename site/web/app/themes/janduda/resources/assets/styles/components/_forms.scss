@@ -34,3 +34,35 @@
     font-size: $size-6;
   }
 }
+
+[class*="form-control-wrap"] {
+  display: block;
+
+  @extend .control;
+
+  [class*="form-control"] {
+    width: 100%;
+    border: 1px solid $grey-lighter;
+    border-radius: $input-radius;
+    font-size: $size-6;
+    outline: none;
+    background: $white;
+
+    @extend .input.is-large;
+  }
+
+  [class*="textarea"] {
+    min-height: 6 * $gap;
+  }
+
+  [class*="tip"] {
+    font-size: $size-7;
+  }
+}
+
+form [class*="response-output"] {
+  margin: 0 auto;
+  border: none;
+
+  @extend .notification;
+}

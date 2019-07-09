@@ -1,7 +1,8 @@
 import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
 
-const downloadImageButton = document.querySelector('.download-image')
+const navbarEl = document.querySelector('.navbar')
+const downloadImageButtonEl = document.querySelector('.download-image')
 const imageDownload = (gallery) => {
   const slider = gallery.getSlider()
   const currentSlide = slider.slides[slider.activeIndex]
@@ -13,10 +14,10 @@ const imageDownload = (gallery) => {
 export default {
   init() {
     // JavaScript to be fired on all pages
-    new Navbar()
+    new Navbar(navbarEl)
     const gallery = new Slider('.gallery')
-    if(downloadImageButton) {
-      downloadImageButton.addEventListener('click', e => {
+    if(downloadImageButtonEl) {
+      downloadImageButtonEl.addEventListener('click', e => {
         e.preventDefault()
         imageDownload(gallery)
       })

@@ -16,9 +16,9 @@
         <span>Zobacz więcej</span>
       </button>
     </div>
-    <pre>
+    <!-- <pre>
       {{ page }}
-    </pre>
+    </pre> -->
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
     },
     isLastPage() {
       return this.page.current === this.page.total
-    }
+    },
   },
   mounted() {
     this.events = this.list
@@ -76,6 +76,7 @@ export default {
           }, 1 * 1000)
         })
         .catch(error => {
+          console.log('Error:', error)
           this.error = true
           this.isLoading = false
         })

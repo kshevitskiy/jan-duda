@@ -45,7 +45,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
     /**
@@ -131,36 +132,3 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
-
-
-// add_action( 'rest_api_init', function() {
-//     register_rest_route( 'jkd/v1', 'my-posts', [
-//         'methods' => 'GET',
-//         'callback' => function() {
-//             $posts_list = get_posts([
-//                 'post_type' => 'event'
-//             ]);
-//             wp_reset_postdata();
-//             return rest_ensure_response( $posts_list );
-//         }
-//     ] );
-// });
-
-// function my_posts() {								
-//     // default the author list to all
-//     $post_author = 'all';
-//     // get the posts
-//     $posts_list = get_posts( array( 'type' => 'post', 'author' => $post_author ) );
-//     $post_data = array();
-//     foreach( $posts_list as $posts) {
-//         $post_id = $posts->ID;
-//         $post_author = $posts->post_author;
-//         $post_title = $posts->post_title;
-//         $post_content = $posts->post_content;
-//         $post_data[ $post_id ][ 'author' ] = $post_author;
-//         $post_data[ $post_id ][ 'title' ] = $post_title;
-//         $post_data[ $post_id ][ 'content' ] = $post_content;
-//     }
-//     wp_reset_postdata();
-//     return rest_ensure_response( $post_data );
-// }

@@ -3,54 +3,54 @@
   width: 100%;
   top: 0;
   left: 0;
-}
 
-.banner .navbar {
-  background-color: transparent;
-}
+  .navbar {
+    transition: background-color 0.2s;
+  }
 
-.banner .nav li {
-  @extend .navbar-item;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  margin: 0 0.75rem;
-
-  > a {
-    padding: 0;
-
+  .nav li {
     @extend .navbar-item;
   }
 
-  &:not(:last-child) {
+  .menu-item {
+    display: flex;
+    align-items: center;
+    margin: 0 0.75rem;
+
+    > a {
+      padding: 0;
+
+      @extend .navbar-item;
+    }
+
+    &:not(:last-child) {
+      @include until($desktop) {
+        margin-bottom: ($spacer / 2);
+      }
+    }
+
     @include until($desktop) {
-      margin-bottom: ($spacer / 2);
+      font-size: $size-3;
+      font-weight: 600;
+      justify-content: center;
+    }
+
+    @include until($tablet) {
+      font-size: $size-4;
     }
   }
 
-  @include until($desktop) {
-    font-size: $size-3;
-    font-weight: 600;
-    justify-content: center;
+  .current-menu-item > a {
+    border-bottom: 1px solid;
+
+    @extend .navbar-item.is-active;
   }
 
-  @include until($tablet) {
-    font-size: $size-4;
-  }
-}
-
-.current-menu-item > a {
-  border-bottom: 1px solid;
-
-  @extend .navbar-item.is-active;
-}
-
-.navbar-menu {
-  @include until($desktop) {
-    box-shadow: 0 -#{$navbar-height} 0 rgba($black, 0.95);
-    background-color: rgba($black, 0.95);
-    padding-bottom: $navbar-height;
+  .navbar-menu {
+    @include until($desktop) {
+      box-shadow: 0 -#{$navbar-height} 0 rgba($black, 0.95);
+      background-color: rgba($black, 0.95);
+      padding-bottom: $navbar-height;
+    }
   }
 }

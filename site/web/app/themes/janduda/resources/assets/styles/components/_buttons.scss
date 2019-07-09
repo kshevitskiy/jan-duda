@@ -4,6 +4,22 @@
   border-radius: 2px;
   box-shadow: none;
   min-width: 6 * $gap;
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      &:hover,
+      &.is-hovered {
+        background-color: darken($color, 10%);
+      }
+
+      &:active,
+      &.is-active {
+        background-color: darken($color, 12.5%);
+      }
+    }
+  }
 }
 
 .button.is-medium {

@@ -48,7 +48,7 @@ export default {
   computed: {
     modifiers() {
       return [
-        `event--${this.type}`,
+        `event-card--${this.type}`,
       ]
     },
   },

@@ -18,17 +18,33 @@
 
   .link {
     color: $grey;
+
+    &:hover {
+      color: $dark;
+    }
   }
 
   .nav {
     list-style-type: none;
     margin: 0;
 
-    .nav-item:not(:last-child) {
-      margin-bottom: $gap / 2;
+    @include from($desktop) {
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .nav-item a {
+    .menu-item {
+      @include from($desktop) {
+        flex-shrink: 0;
+        width: 50%;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: $gap / 2;
+      }
+    }
+
+    .menu-item a {
       @extend .link;
     }
   }

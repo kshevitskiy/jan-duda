@@ -12,7 +12,7 @@
           v-for="event in list"
           :key="event.id"
           :event="event"
-          type="upcoming"
+          type="overview"
         >
         </event-card>
       </template>

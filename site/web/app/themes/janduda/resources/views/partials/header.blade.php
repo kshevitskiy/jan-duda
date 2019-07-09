@@ -1,5 +1,5 @@
 <header class="banner">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="{{ home_url('/') }}">

@@ -53,29 +53,9 @@
             </h3>
           </header>
           <div class="contact-body">
-            {{ $form }}
-            <form class="form">
-              <div class="field">
-                <div class="control">
-                  <input class="input is-large" type="text" placeholder="Imię i nazwisko">
-                </div>
-              </div>
-              <div class="field">
-                <div class="control">
-                  <input class="input is-large" type="text" placeholder="E-mail">
-                </div>
-              </div>
-              <div class="field">
-                <div class="control">
-                  <textarea class="textarea is-large" placeholder="Treść wiadomości"></textarea>
-                </div>
-              </div>
-              <div class="field">
-                <button class="button is-primary is-large is-fullwidth">
-                  Wyślij
-                </button>
-              </div>
-            </form>
+            @php
+              echo do_shortcode($form);
+            @endphp
           </div>
         </div>
       </div>

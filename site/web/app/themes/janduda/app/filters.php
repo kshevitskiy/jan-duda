@@ -89,3 +89,45 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+// add_filter( 'rest_query_vars', function ( $valid_vars ) {
+//     return array_merge( $valid_vars, array( 'event_report', 'meta_query' ) );
+// } );
+
+// add_filter( 'rest_event_query', function( $args, $request ) {
+//     $land = $request->get_param('event_report');
+
+//     if (!empty($land)) {
+//         $args['meta_query'] = [
+//             [
+//                 'key'     => 'event_report',
+//                 'value'   => $land,
+//                 'compare' => '=',
+//             ]
+//         ];
+//     }
+//     return $args;
+// }, 10, 2 );
+
+
+add_filter( 'rest_query_vars', function( $valid_vars ) {
+    return array_merge( $valid_vars, array( 'meta_query', 'meta_key', 'meta_value' ) );
+} );
+
+add_filter( 'rest_event_query', function( $args, $request ) {
+    $key   = $request->get_param( 'meta_key' );
+    $value = $request->get_param( 'meta_value' );
+
+    if (!empty($value)) {
+        $args['meta_query'] = [
+            [
+                'key'     => $key,
+                'value'   => $value,
+                'compare' => '=',
+            ]    
+        ];
+    }
+
+    return $args;
+}, 10, 2 );

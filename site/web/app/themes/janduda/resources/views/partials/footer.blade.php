@@ -13,56 +13,25 @@
         </div>
         <div class="column is-12 is-3-desktop widget">
           <div class="widget-content widget-content--centered">
-            <h5>Dane kontaktowe</h5>
-            <p>
-              <a href="tel:48526488265" target="_blank" class="link">+48 526 488 265</a><br>
-              <a href="mailto:jkd@chess.com" target="_blank" class="link">jkd@chess.com</a>
-            </p>
-            <a href="#" class="button is-medium is-primary">
-              Formularz
-            </a>
+            @php dynamic_sidebar('sidebar-footer') @endphp
           </div>
         </div>
-        <div class="column widget is-hidden-touch">
-          <div class="widget-content">
-            <div class="columns">
-              <div class="column is-5-fullhd is-offset-1-fullhd">
-                <ul class="nav">
-                  <li class="nav-item">
-                    <a href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Bio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Kalendarz</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Sponsorzy</a>
-                  </li>                                    
-                </ul>
-              </div>
-              <div class="column is-5-fullhd">
-                <ul class="nav">
-                  <li class="nav-item">
-                    <a href="#">Media</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Kontakt</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Polityka prywatności</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Regulamin</a>
-                  </li>                                    
-                </ul> 
+        @if (has_nav_menu('footer_navigation'))
+          <div class="column widget is-hidden-touch">
+            <div class="widget-content">
+              <div class="columns">
+                  {!! wp_nav_menu([
+                    'theme_location'  => 'footer_navigation',
+                    'container'       => 'div',
+                    'container_id'    => 'footerNav',
+                    'container_class' => 'column is-11-fullhd is-offset-1-fullhd',
+                    'menu_class'      => 'nav'
+                  ]) !!}
               </div>
             </div>
           </div>
-        </div>
+        @endif
       </div>
-      @php dynamic_sidebar('sidebar-footer') @endphp
     </div>
   </div>
 
