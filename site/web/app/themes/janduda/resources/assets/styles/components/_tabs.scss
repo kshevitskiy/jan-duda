@@ -4,31 +4,43 @@
       margin-bottom: 0;
     }
 
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     li {
+      flex: 1;
+
+      @include from($tablet) {
+        flex: unset;
+      }
+
       a {
+        width: 100%;
+        min-width: auto;
         border: none;
 
         @extend .button.is-medium;
-      }
 
-      &:not(.is-active) {
-        a {
-          color: $primary;
-          background-color: rgba($primary, 0.15);
+        @include from($tablet) {
+          width: auto;
+          min-width: 6 * $gap;
         }
       }
-    }
 
-    li:first-child {
-      a {
-        border-radius: 2px 0 0 0;
+      &:not(.is-active) a {
+        color: $primary;
+        background-color: rgba($primary, 0.15);
       }
     }
 
-    li:last-child {
-      a {
-        border-radius: 0 2px 0 0;
-      }
+    li:first-child a {
+      border-radius: 2px 0 0 0;
+    }
+
+    li:last-child a {
+      border-radius: 0 2px 0 0;
     }
   }
 }

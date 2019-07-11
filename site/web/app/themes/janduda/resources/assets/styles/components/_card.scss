@@ -123,7 +123,11 @@
   }
 
   &__title {
-    margin-right: $gap;
+    margin-right: ($gap / 2);
+
+    @include from($tablet) {
+      margin-right: $gap;
+    }
   }
 
   &__link {
@@ -133,10 +137,14 @@
   }
 
   &--upcoming {
-    padding: $gap $gap 1.5 * $gap;
+    padding: $gap ($gap / 2) (1.5 * $gap);
 
     #{$root}__title {
       margin-bottom: 0;
+    }
+
+    @include from($tablet) {
+      padding: $gap $gap 1.5 * $gap;
     }
   }
 
@@ -282,6 +290,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 
   &:not(:last-child) {
     @include from($tablet) {

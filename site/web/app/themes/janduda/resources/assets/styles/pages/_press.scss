@@ -72,12 +72,15 @@
 }
 
 .gallery-actions {
-  z-index: 9;
-  position: absolute;
-  right: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
+
+  @include from($tablet) {
+    z-index: 9;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 
   .action {
     min-height: 2.5 * $gap;

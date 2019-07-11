@@ -1,5 +1,5 @@
 @if( have_rows('achievements_stats') )
-<section class="stats">
+<section class="section stats">
   <div class="container">
     <div class="columns">      
       @while ( have_rows('achievements_stats') ) @php the_row() @endphp
