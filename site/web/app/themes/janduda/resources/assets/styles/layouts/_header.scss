@@ -60,9 +60,11 @@
 }
 
 .navbar-burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include until($desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   span {
     position: relative;

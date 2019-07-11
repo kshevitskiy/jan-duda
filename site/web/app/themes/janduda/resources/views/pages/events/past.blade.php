@@ -6,7 +6,10 @@
   </header>
 
   <div class="container">
-    <list-posts :list="{{ $past_events }}">
+    <list-posts
+      :list="{{ $past_events }}"
+      api-url="/wp-json/slvr/v1/past-events"
+    >
       <template v-slot:default="{ list }">
         <event-card
           v-for="event in list"

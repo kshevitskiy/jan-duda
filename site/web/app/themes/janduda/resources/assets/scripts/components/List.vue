@@ -29,6 +29,10 @@ export default {
       type: [Object, Array],
       required: true,
     },
+    apiUrl: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
@@ -50,27 +54,38 @@ export default {
       ]
     },
     isLastPage() {
-      return this.page.current === this.page.total
+      return this.page.current >= this.page.total
     },
   },
   mounted() {
     this.events = this.list
+    this.fetchTotalPages()
   },
   methods: {
+    fetchTotalPages() {
+      fetch(`${this.apiUrl}?page=1`)
+        .then(response => {
+          const totalPages = response.headers.get('x-wp-totalpages')
+          this.page.total = totalPages
+            ? Number(totalPages)
+            : 0
+        })
+        .catch(error => {
+          console.log('Error:', error)
+          this.error = true
+        })
+    },
     fetchPosts() {
       if (this.isLastPage) return
       this.isLoading = true
       this.page.current++
-      fetch(`/wp-json/wp/v2/events?per_page=3&page=${this.page.current}`)
+      fetch(`${this.apiUrl}?page=${this.page.current}`)
         .then(response => {
-          this.page.total = Number(response.headers.get('x-wp-totalpages'))
           return response.json()
         })
         .then(data => {          
           this.events.push(...data)          
           this.error = false
-          console.log('Data:', this.events)
-
           setTimeout(() => {
             this.isLoading = false
           }, 1 * 1000)

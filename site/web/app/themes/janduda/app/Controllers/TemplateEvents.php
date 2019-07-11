@@ -70,7 +70,7 @@ class TemplateEvents extends Controller
         'id'    => $post->ID,
         'title' => $post->post_title,
         'url'   => get_the_permalink($post->ID),
-        'image' => get_the_post_thumbnail_url($post->ID),
+        'image' => get_the_post_thumbnail_url($post->ID, 'card-thumb'),
         'city'  => get_field('event_city', $post->ID),
         'date'  => get_field('event_date', $post->ID),
       ];

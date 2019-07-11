@@ -4,11 +4,13 @@
       <div class="columns is-multiline">
         <div class="column widget">
           <div class="widget-content">
-            <img
-              src="@asset('images/svg/logo.svg')"
-              alt="JKD"
-              class="footer-logo"
-            >
+            <a href="{{ home_url('/') }}">
+              <img
+                src="@asset('images/svg/logo.svg')"
+                alt="JKD"
+                class="footer-logo"
+              >
+            </a>
           </div>
         </div>
         <div class="column is-12 is-3-desktop widget">

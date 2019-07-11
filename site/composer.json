@@ -89,6 +89,7 @@
     "wpackagist-plugin/svg-support": "*",
     "wpackagist-plugin/acf-to-rest-api": "*",
     "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
     "kshevitskiy/jkd-plugin": "*"
   },
   "require-dev": {

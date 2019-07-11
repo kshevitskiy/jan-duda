@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section" id="contact">
   <div class="container">
     @if($person && array_filter($person))
     <div class="columns is-variable is-4 is-multiline">

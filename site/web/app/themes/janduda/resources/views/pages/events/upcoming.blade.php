@@ -6,7 +6,11 @@
   </header>
 
   <div class="container">
-    <list-posts :list="{{ $upcoming_events }}" class="list-wrapper--upcoming">
+    <list-posts
+      :list="{{ $upcoming_events }}"
+      api-url="/wp-json/slvr/v1/upcoming-events"
+      class="list-wrapper--upcoming"
+    >      
       <template v-slot:default="{ list }">
         <event-card
           v-for="event in list"
