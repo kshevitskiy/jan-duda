@@ -90,7 +90,7 @@
     "wpackagist-plugin/acf-to-rest-api": "*",
     "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/regenerate-thumbnails": "*",
-    "kshevitskiy/jkd-plugin": "*"
+    "kshevitskiy/jkd-plugin": "^1.0.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",
