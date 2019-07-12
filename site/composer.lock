@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2d90058bc6854c8eeddaefa577872a5",
+    "content-hash": "ab1eb33ceb58480ece0de277061e3a1a",
     "packages": [
         {
             "name": "composer/installers",
@@ -287,16 +287,16 @@
         },
         {
             "name": "kshevitskiy/jkd-plugin",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:kshevitskiy/jkd-plugin.git",
-                "reference": "1145b637bf5953d56475d9dfb44b251c18766bce"
+                "reference": "8ebae4c0c5b7a12bcb9eb3975edd0ff94e906248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kshevitskiy/jkd-plugin/zipball/1145b637bf5953d56475d9dfb44b251c18766bce",
-                "reference": "1145b637bf5953d56475d9dfb44b251c18766bce",
+                "url": "https://api.github.com/repos/kshevitskiy/jkd-plugin/zipball/8ebae4c0c5b7a12bcb9eb3975edd0ff94e906248",
+                "reference": "8ebae4c0c5b7a12bcb9eb3975edd0ff94e906248",
                 "shasum": ""
             },
             "require": {
@@ -312,10 +312,10 @@
             },
             "description": "Plugin for Jan Duda website",
             "support": {
-                "source": "https://github.com/kshevitskiy/jkd-plugin/tree/1.0.2",
+                "source": "https://github.com/kshevitskiy/jkd-plugin/tree/1.0.3",
                 "issues": "https://github.com/kshevitskiy/jkd-plugin/issues"
             },
-            "time": "2019-07-08T21:19:21+00:00"
+            "time": "2019-07-12T00:28:57+00:00"
         },
         {
             "name": "oscarotero/env",
