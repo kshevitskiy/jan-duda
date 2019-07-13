@@ -39,10 +39,10 @@
 
   <div class="footer-social">
     <div class="container">
-      <a href="#" class="reference">
+      <a href="https://www.facebook.com/jankrzysztof.duda.9" class="reference" target="_blank">
         <i class="icon icon-facebook is-small"></i>
       </a>
-      <a href="#" class="reference">
+      <a href="#" class="reference" target="_blank">
         <i class="icon icon-twitter is-small"></i>
       </a>
     </div>
