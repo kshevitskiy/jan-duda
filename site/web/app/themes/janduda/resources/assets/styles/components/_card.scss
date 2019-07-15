@@ -178,6 +178,28 @@
 
   &__link {
     color: $primary;
+
+    span {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    span::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      border-bottom: 1px solid;
+      transform: translateX(-100%);
+      transition: transform 0.4s;
+    }
+  }
+
+  &:hover .news-card__link span::after {
+    transform: translateX(0%);
   }
 
   .card-content {

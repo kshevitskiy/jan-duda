@@ -34,7 +34,7 @@
               </p>
             </div>
             <a href="{{ get_the_permalink($featured->ID) }}" class="news-card__link">
-              Czytaj więcej
+              <span>Czytaj więcej</span>
             </a>
           </div>
         </div>
@@ -46,21 +46,18 @@
           <div class="card news-card">
             <div class="card-content">
               <p class="news-card__date">
-                {{-- 04.11.2018 --}}
                 {{ get_the_date('d.m.Y', $post->ID) }}
               </p>
               <h3 class="news-card__title">
                 {{ get_the_title($post->ID) }}
-                {{-- Panie Duda, czy jest pan geniuszem? --}}
               </h3>
               <div class="news-card__content">
                 <p>
                   {!! get_the_excerpt($post->ID) !!}
-                  {{-- Ludzie uważają, że wybitny szachista musi być też człowiekiem superinteligentnym. Świetnym fizykiem, matematykiem itd... --}}
                 </p>
               </div>
               <a href="{{ get_the_permalink($post->ID) }}" class="news-card__link">
-                Czytaj więcej
+                <span>Czytaj więcej</span>
               </a>
             </div>
           </div>

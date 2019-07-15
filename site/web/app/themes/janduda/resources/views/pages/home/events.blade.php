@@ -27,7 +27,7 @@
       </template>
       <template v-slot:past>
         @foreach($past_events as $event)
-        <div class="event-card event-card--upcoming">
+        <a href="{{ get_the_permalink($event->ID) }}" class="event-card event-card--upcoming">
           <div class="event-card__city">
             {{ get_field('event_city', $event->ID) }}
           </div>
@@ -40,7 +40,7 @@
               {{ get_the_title($event->ID) }}
             </h3>
           </div>
-        </div>
+        </a>
         @endforeach
       </template>      
     </hello-world>

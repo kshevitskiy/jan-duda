@@ -7,7 +7,6 @@ const imageDownload = (gallery) => {
   const slider = gallery.getSlider()
   const currentSlide = slider.slides[slider.activeIndex]
   const imageUrl = currentSlide.getAttribute('data-image')
-  console.log(imageUrl)
   window.open(imageUrl)
 }
 

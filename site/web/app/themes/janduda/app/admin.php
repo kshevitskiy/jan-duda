@@ -29,20 +29,17 @@ add_action('customize_preview_init', function () {
 add_action( 'admin_init', function () {
     global $pagenow;
     if ($pagenow != 'post.php') return;
+    if (!isset($_GET['post'])) return;
     
-    $post_id = $_GET['post']
-        ? $_GET['post']
-        : $_POST['post_ID'];
-
-    if( !isset( $post_id ) ) return;
-
+    $post_id = $_GET['post'];
     $template_file = get_post_meta($post_id, '_wp_page_template', true);
     $templates = [
         'views/template-bio.blade.php',
         'views/template-home.blade.php',
         'views/template-media.blade.php',
         'views/template-events.blade.php',
-        'views/template-sponsors.blade.php'
+        'views/template-sponsors.blade.php',
+        'views/template-contact.blade.php'
     ];
 
     foreach($templates as $template) {

@@ -9,12 +9,19 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: $gap / 2;
-  padding-bottom: $gap / 2;
+  padding: $gap / 2;
   border-bottom: 1px solid $grey-lighter;
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: $white-ter;
+
+    span {
+      color: $primary;
+    }
+  }
 
   @include from($tablet) {
-    padding-top: $gap;
-    padding-bottom: $gap;
+    padding: $gap;
   }
 }
