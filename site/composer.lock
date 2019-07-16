@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab1eb33ceb58480ece0de277061e3a1a",
+    "content-hash": "4f595b50ebe59a2d9cc3655be23df53a",
     "packages": [
         {
             "name": "composer/installers",
@@ -287,16 +287,16 @@
         },
         {
             "name": "kshevitskiy/jkd-plugin",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:kshevitskiy/jkd-plugin.git",
-                "reference": "8ebae4c0c5b7a12bcb9eb3975edd0ff94e906248"
+                "reference": "419cb889d8b866e278b3caa485860a8930ee5ba6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kshevitskiy/jkd-plugin/zipball/8ebae4c0c5b7a12bcb9eb3975edd0ff94e906248",
-                "reference": "8ebae4c0c5b7a12bcb9eb3975edd0ff94e906248",
+                "url": "https://api.github.com/repos/kshevitskiy/jkd-plugin/zipball/419cb889d8b866e278b3caa485860a8930ee5ba6",
+                "reference": "419cb889d8b866e278b3caa485860a8930ee5ba6",
                 "shasum": ""
             },
             "require": {
@@ -312,10 +312,10 @@
             },
             "description": "Plugin for Jan Duda website",
             "support": {
-                "source": "https://github.com/kshevitskiy/jkd-plugin/tree/1.0.3",
+                "source": "https://github.com/kshevitskiy/jkd-plugin/tree/1.0.4",
                 "issues": "https://github.com/kshevitskiy/jkd-plugin/issues"
             },
-            "time": "2019-07-12T00:28:57+00:00"
+            "time": "2019-07-15T23:39:51+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -862,12 +862,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "a53a6f855cbff7edb078f87c72bb808c89443a00"
+                "reference": "2e50fc5a89e1e77b68c7e3c3aa6d87da0b8d4c6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/a53a6f855cbff7edb078f87c72bb808c89443a00",
-                "reference": "a53a6f855cbff7edb078f87c72bb808c89443a00",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/2e50fc5a89e1e77b68c7e3c3aa6d87da0b8d4c6d",
+                "reference": "2e50fc5a89e1e77b68c7e3c3aa6d87da0b8d4c6d",
                 "shasum": ""
             },
             "conflict": {
@@ -970,7 +970,7 @@
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-                "simplesamlphp/simplesamlphp": "<1.15.2|>=1.16,<1.16.3",
+                "simplesamlphp/simplesamlphp": "<1.17.3",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "slim/slim": "<2.6",
                 "smarty/smarty": "<3.1.33",
@@ -1069,7 +1069,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-06-25T10:37:35+00:00"
+            "time": "2019-07-14T14:21:52+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
